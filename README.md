@@ -1,4 +1,4 @@
-# capstone-local-llm
+## capstone-local-llm
 
 Demonstration of running locally **Ollama** and **Open-WebUI** on a WSL2 containerized environment.
 
