@@ -14,12 +14,26 @@ Demonstration of running locally **Ollama** and **Open-WebUI** on a WSL2 contain
 - Install ollama with below command:
 
 **NOTE:** here `PWD/ollama` represents host directory where models data will be saved.
+
 ```  
 podman run --name ollama --rm --detach --privileged --gpus all -p 11434:11434 -v $PWD/ollama:/root/.ollama ollama/ollama
 ```
 - Verify if container is up using below command:
+
 ```
 podman container ls
+```
+
+### Pulling Model in Ollama:
+
+- Create an alias using below command:
+```
+ alias ollama='podman exec ollama ollama'
+```
+
+- Run below command to pull ollama model:
+```
+ollama pull qwen2.5-coder:0.5b
 ```
 
 ### Open-WebUI Installation:
